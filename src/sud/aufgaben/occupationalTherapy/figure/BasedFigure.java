@@ -12,6 +12,11 @@ public abstract class BasedFigure<T extends Form> extends Figure {
     private T base;
     private double height;
 
+    /**
+     * Constructor of the BasedFigure class
+     * @param base Base of the figure
+     * @param height Height of the figure
+     */
     public BasedFigure(T base, double height) {
         this.setBase(base);
         this.setHeight(height);

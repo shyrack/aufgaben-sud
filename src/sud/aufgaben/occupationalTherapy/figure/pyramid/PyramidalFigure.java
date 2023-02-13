@@ -10,6 +10,11 @@ import sud.aufgaben.occupationalTherapy.form.Form;
  */
 public abstract class PyramidalFigure<T extends Form> extends BasedFigure<T> {
 
+    /**
+     * Constructor of the PyramidalFigure class
+     * @param base Base of the figure
+     * @param height Height of the figure
+     */
     public PyramidalFigure(T base, double height) {
         super(base, height);
     }
