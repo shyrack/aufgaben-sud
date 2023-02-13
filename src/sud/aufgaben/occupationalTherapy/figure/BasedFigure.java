@@ -13,8 +13,8 @@ public abstract class BasedFigure<T extends Form> extends Figure {
     private double height;
 
     public BasedFigure(T base, double height) {
-        this.base = base;
-        this.height = height;
+        this.setBase(base);
+        this.setHeight(height);
     }
 
     public T getBase() {
@@ -36,7 +36,11 @@ public abstract class BasedFigure<T extends Form> extends Figure {
     }
 
     public void setHeight(double height) {
-        this.height = height;
+        if (height > 0) {
+            this.height = height;
+        } else {
+            throw new IllegalArgumentException("Height must be a positive number.");
+        }
     }
 
 }

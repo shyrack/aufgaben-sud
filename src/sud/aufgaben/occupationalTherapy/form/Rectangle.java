@@ -5,8 +5,8 @@ public class Rectangle extends Form {
     private double a, b;
 
     public Rectangle(double a, double b) {
-        this.a = a;
-        this.b = b;
+        this.setA(a);
+        this.setB(b);
     }
 
     @Override
@@ -28,11 +28,19 @@ public class Rectangle extends Form {
     }
 
     public void setA(double a) {
-        this.a = a;
+        if (a > 0) {
+            this.a = a;
+        } else {
+            throw new IllegalArgumentException("a must be a positive double.");
+        }
     }
 
     public void setB(double b) {
-        this.b = b;
+        if (b > 0) {
+            this.b = b;
+        } else {
+            throw new IllegalArgumentException("b must be a positive double.");
+        }
     }
 
 }

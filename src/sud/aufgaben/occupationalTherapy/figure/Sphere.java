@@ -23,7 +23,11 @@ public class Sphere extends Figure {
     }
 
     public void setRadius(double radius) {
-        this.radius = radius;
+        if (radius > 0) {
+            this.radius = radius;
+        } else {
+            throw new IllegalArgumentException("Radius must be a positive double.");
+        }
     }
 
 }

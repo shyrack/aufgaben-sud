@@ -5,7 +5,7 @@ public class Circle extends Form {
     private double radius;
 
     public Circle(double radius) {
-        this.radius = radius;
+        this.setRadius(radius);
     }
 
     @Override
@@ -23,7 +23,11 @@ public class Circle extends Form {
     }
 
     public void setRadius(double radius) {
-        this.radius = radius;
+        if (radius > 0) {
+            this.radius = radius;
+        } else {
+            throw new IllegalArgumentException("Radius must be a positive double.");
+        }
     }
 
 }

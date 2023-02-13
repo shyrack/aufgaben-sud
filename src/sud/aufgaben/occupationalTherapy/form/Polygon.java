@@ -6,8 +6,8 @@ public class Polygon extends Form {
     private int n;
 
     public Polygon(double radius, int n) {
-        this.radius = radius;
-        this.n = n;
+        this.setRadius(radius);
+        this.setN(n);
     }
 
     @Override
@@ -33,11 +33,19 @@ public class Polygon extends Form {
     }
 
     public void setN(int n) {
-        this.n = n;
+        if (n > 2) {
+            this.n = n;
+        } else {
+            throw new IllegalArgumentException("n must be a integer greater than 2.");
+        }
     }
 
     public void setRadius(double radius) {
-        this.radius = radius;
+        if (radius > 0) {
+            this.radius = radius;
+        } else {
+            throw new IllegalArgumentException("Radius must be a positive double.");
+        }
     }
 
 }
