@@ -26,10 +26,10 @@ public abstract class BasedFigure<T extends Form> extends Figure {
     }
 
     @Override
-    public abstract double getSurface();
+    public abstract double surface();
 
     @Override
-    abstract public double getVolume();
+    abstract public double volume();
 
     public void setBase(T base) {
         this.base = base;

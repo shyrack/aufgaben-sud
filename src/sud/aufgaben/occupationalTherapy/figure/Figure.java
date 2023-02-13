@@ -10,13 +10,13 @@ public abstract class Figure {
      *
      * @return Surface of the figure.
      */
-    public abstract double getSurface();
+    public abstract double surface();
 
     /**
      * Calculates the volume of the figure.
      *
      * @return Volume of the figure.
      */
-    public abstract double getVolume();
+    public abstract double volume();
 
 }

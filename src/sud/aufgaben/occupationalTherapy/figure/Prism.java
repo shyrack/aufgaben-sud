@@ -9,12 +9,12 @@ public class Prism<T extends Form> extends BasedFigure<T> {
     }
 
     @Override
-    public double getSurface() {
+    public double surface() {
         return 2 * super.getBase().area() + super.getHeight() * super.getBase().circumference();
     }
 
     @Override
-    public double getVolume() {
+    public double volume() {
         return super.getBase().area() * super.getHeight();
     }
 

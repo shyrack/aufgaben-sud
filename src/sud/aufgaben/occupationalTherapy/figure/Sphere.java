@@ -13,12 +13,12 @@ public class Sphere extends Figure {
     }
 
     @Override
-    public double getSurface() {
+    public double surface() {
         return 4 * Math.PI * Math.pow(this.radius, 2);
     }
 
     @Override
-    public double getVolume() {
+    public double volume() {
         return 4d / 3 * Math.PI * Math.pow(this.radius, 2);
     }
 

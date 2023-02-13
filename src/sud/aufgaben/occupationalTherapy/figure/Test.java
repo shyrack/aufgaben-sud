@@ -21,8 +21,8 @@ public class Test {
     private static void testSphere() {
         Sphere sphere = new Sphere(2.5);
         System.out.println("-----------| " + sphere.getClass().getSimpleName() + " |-----------");
-        System.out.println("Surface: " + sphere.getSurface());
-        System.out.println("Volume: " + sphere.getVolume());
+        System.out.println("Surface: " + sphere.surface());
+        System.out.println("Volume: " + sphere.volume());
     }
 
     private static void testPyramids() {
@@ -36,8 +36,8 @@ public class Test {
         };
         Arrays.stream(figures).forEach(pyramidalFigure -> {
             System.out.println("-----------| " + pyramidalFigure.getClass().getSimpleName() + " |-----------");
-            System.out.println("Surface: " + pyramidalFigure.getSurface());
-            System.out.println("Volume: " + pyramidalFigure.getVolume());
+            System.out.println("Surface: " + pyramidalFigure.surface());
+            System.out.println("Volume: " + pyramidalFigure.volume());
         });
     }
 
@@ -52,8 +52,8 @@ public class Test {
         };
         Arrays.stream(figures).forEach(prism -> {
             System.out.println("-----------| " + prism.getClass().getSimpleName() + ": " + prism.getBase().getClass().getSimpleName() + " |-----------");
-            System.out.println("Surface: " + prism.getSurface());
-            System.out.println("Volume: " + prism.getVolume());
+            System.out.println("Surface: " + prism.surface());
+            System.out.println("Volume: " + prism.volume());
         });
     }
 

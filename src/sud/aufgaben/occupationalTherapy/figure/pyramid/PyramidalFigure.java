@@ -15,12 +15,12 @@ public abstract class PyramidalFigure<T extends Form> extends BasedFigure<T> {
     }
 
     @Override
-    public double getSurface() {
+    public double surface() {
         return this.lateralSurface() + super.getBase().area();
     }
 
     @Override
-    public double getVolume() {
+    public double volume() {
         return (super.getBase().area() * super.getHeight()) / 3;
     }
 
