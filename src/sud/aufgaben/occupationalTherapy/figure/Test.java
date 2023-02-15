@@ -15,7 +15,7 @@ public class Test {
     public static void main(String[] args) {
         testSphere();
         testPyramids();
-        testPrims();
+        testPrism();
     }
 
     private static void testSphere() {
@@ -41,7 +41,7 @@ public class Test {
         });
     }
 
-    private static void testPrims() {
+    private static void testPrism() {
         Circle cylinderBase = new Circle(2.5);
         Triangle threeSidedPrism = new Triangle(2, 2, 2);
         Rectangle fourSidedPrism = new Rectangle(2, 2);
