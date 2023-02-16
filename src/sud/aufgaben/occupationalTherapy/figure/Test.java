@@ -1,10 +1,8 @@
 package sud.aufgaben.occupationalTherapy.figure;
 
-import sud.aufgaben.occupationalTherapy.figure.pyramid.Cone;
-import sud.aufgaben.occupationalTherapy.figure.pyramid.FourSidedPyramid;
-import sud.aufgaben.occupationalTherapy.figure.pyramid.PyramidalFigure;
-import sud.aufgaben.occupationalTherapy.figure.pyramid.ThreeSidedPyramid;
+import sud.aufgaben.occupationalTherapy.figure.pyramid.*;
 import sud.aufgaben.occupationalTherapy.form.Circle;
+import sud.aufgaben.occupationalTherapy.form.Polygon;
 import sud.aufgaben.occupationalTherapy.form.Rectangle;
 import sud.aufgaben.occupationalTherapy.form.Triangle;
 
@@ -29,10 +27,12 @@ public class Test {
         Circle coneBase = new Circle(2.5);
         Triangle threeSidedPyramidBase = new Triangle(2, 2, 2);
         Rectangle fourSidedPyramidBase = new Rectangle(2, 2);
+        Polygon polygonalPyramidBase = new Polygon(2.5, 5);
         PyramidalFigure<?>[] figures = {
                 new Cone(coneBase, 5),
                 new ThreeSidedPyramid(threeSidedPyramidBase, 2),
-                new FourSidedPyramid(fourSidedPyramidBase, 2)
+                new FourSidedPyramid(fourSidedPyramidBase, 2),
+                new PolygonalPyramid(polygonalPyramidBase, 2)
         };
         Arrays.stream(figures).forEach(pyramidalFigure -> {
             System.out.println("-----------| " + pyramidalFigure.getClass().getSimpleName() + " |-----------");
