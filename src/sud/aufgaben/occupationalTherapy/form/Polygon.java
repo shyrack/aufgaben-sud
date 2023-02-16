@@ -28,7 +28,7 @@ public class Polygon extends Form {
         return this.outerRadius;
     }
 
-    private double getSideLength() {
+    public double getSideLength() {
         return 2 * this.outerRadius * Math.sin(Math.PI / this.n);
     }
 
