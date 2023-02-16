@@ -2,11 +2,11 @@ package sud.aufgaben.occupationalTherapy.form;
 
 public class Polygon extends Form {
 
-    private double radius;
+    private double outerRadius;
     private int n;
 
-    public Polygon(double radius, int n) {
-        this.setRadius(radius);
+    public Polygon(double outerRadius, int n) {
+        this.setOuterRadius(outerRadius);
         this.setN(n);
     }
 
@@ -17,19 +17,23 @@ public class Polygon extends Form {
 
     @Override
     public double area() {
-        return this.n * this.radius * this.getSideLength() / 2;
+        return this.n * this.outerRadius * this.getSideLength() / 2;
     }
 
     public int getN() {
         return this.n;
     }
 
-    public double getRadius() {
-        return this.radius;
+    public double getOuterRadius() {
+        return this.outerRadius;
     }
 
     private double getSideLength() {
-        return 2 * this.radius * Math.sin(Math.PI / this.n);
+        return 2 * this.outerRadius * Math.sin(Math.PI / this.n);
+    }
+
+    public double innerRadius() {
+        return this.getSideLength() / (2 * Math.tan(Math.PI / this.n));
     }
 
     public void setN(int n) {
@@ -40,9 +44,9 @@ public class Polygon extends Form {
         }
     }
 
-    public void setRadius(double radius) {
-        if (radius > 0) {
-            this.radius = radius;
+    public void setOuterRadius(double outerRadius) {
+        if (outerRadius > 0) {
+            this.outerRadius = outerRadius;
         } else {
             throw new IllegalArgumentException("Radius must be a positive double.");
         }
