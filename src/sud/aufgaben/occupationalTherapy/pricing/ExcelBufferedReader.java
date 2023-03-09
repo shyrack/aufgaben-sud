@@ -39,7 +39,7 @@ public class ExcelBufferedReader {
         }
     }
 
-    public void readFile() throws IOException {
+    public List<String[]> readFile() throws IOException {
         this.records.clear();
         List<String> lines = Files.readAllLines(file);
         for (String line : lines) {
@@ -47,6 +47,7 @@ public class ExcelBufferedReader {
                 this.records.add(line.split(COMMA_DELIMITER));
             }
         }
+        return this.records;
     }
 
     public void setFile(Path file) {
