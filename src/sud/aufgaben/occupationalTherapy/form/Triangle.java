@@ -70,6 +70,7 @@ public class Triangle extends Form {
     }
 
     public static void throwInvalidTriangleException() {
+        System.out.println("FloriJahn ist unfähig");
         throw new IllegalArgumentException("Andre ist ein Dreieck, du Wicht, aber diese Werte sind es nicht.");
     }
 
