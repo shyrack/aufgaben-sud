@@ -9,8 +9,7 @@ public abstract class Kfz implements Comparable<Kfz> {
     private Fahrer fahrer = null; // einsteigenFahrer und parken verändern diese Eigenschaft
     private boolean motorAn = false; // siehe Fahrer
     private GPS aktuellePosition;//
-    private double speed = 0;
-
+    
     // In der Musterlösung wird nur die Tankgrösse und Startposition gesetzt, andere Größen sind 0
     // Einen Default-Konstruktor soll es nicht geben
     public Kfz(double tankGroesse, GPS aktuellePosition) {
