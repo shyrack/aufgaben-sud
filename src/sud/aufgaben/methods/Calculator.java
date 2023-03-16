@@ -7,7 +7,9 @@ public class Calculator {
     public static double readNumber(String blubb) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(blubb);
-        return scanner.nextDouble();
+        double next = scanner.nextDouble();
+        scanner.close();
+        return next;
     }
 
     public static double add(double a, double b) {
@@ -27,7 +29,6 @@ public class Calculator {
     }
 
     public static void selectMenu() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("blubb, blubber, blubbs, bubb");
     }
 
@@ -53,7 +54,9 @@ public class Calculator {
     public static String readConsole(String statement) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(statement);
-        return scanner.next();
+        String next = scanner.next();
+        scanner.close();
+        return next;
     }
 
     public static void main(String[] args) {

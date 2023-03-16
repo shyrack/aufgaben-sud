@@ -11,8 +11,6 @@ public class Test {
         } finally {
             System.out.println("Finally..");
         }
-
-        Car copyCar = new Car(car);
     }
 
 }

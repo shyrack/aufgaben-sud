@@ -70,7 +70,7 @@ public class Triangle extends Form {
     }
 
     public static void throwInvalidTriangleException() {
-        throw new IllegalArgumentException("Andrè ist ein Dreieck, du Wicht, aber diese Werte sind es nicht.");
+        throw new IllegalArgumentException("Andre ist ein Dreieck, du Wicht, aber diese Werte sind es nicht.");
     }
 
 }
