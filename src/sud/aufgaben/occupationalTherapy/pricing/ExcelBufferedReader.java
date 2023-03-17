@@ -4,22 +4,23 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ExcelBufferedReader {
 
     private static final String COMMA_DELIMITER = ";";
 
     private Path file;
-    private final List<String[]> records;
+    private final Map<String, Material> records;
 
     public ExcelBufferedReader(String filename) {
         this.file = Paths.get(filename);
-        this.records = new ArrayList<>();
+        this.records = new HashMap<>();
     }
 
-    public List<String[]> getRecords() {
+    public Map<String, Material> getRecords() {
         return this.records;
     }
 
@@ -27,24 +28,23 @@ public class ExcelBufferedReader {
         return this.file;
     }
 
-    public int getTemperatureInLine(int lineNumber) {
-        return Integer.parseInt(records.get(lineNumber)[1]);
-    }
-
     public void printData() {
-        for (String[] stringList : this.records) {
-            for (String s : stringList)
-                System.out.print(s + "; ");
-            System.out.println();
-        }
+        this.records.forEach((key, material) -> {
+            System.out.println(key + ": " + material.getPrice());
+        });
     }
 
-    public List<String[]> readFile() throws IOException {
+    public Map<String, Material> readFile() throws IOException {
         this.records.clear();
         List<String> lines = Files.readAllLines(file);
         for (String line : lines) {
             if (line != null) {
-                this.records.add(line.split(COMMA_DELIMITER));
+                String[] lineValues = line.split(COMMA_DELIMITER);
+                if (lineValues.length == 2) {
+                    this.records.put(lineValues[0], new Material(lineValues[0], Double.parseDouble(lineValues[1])));
+                } else {
+                    throw new IOException("File read was not valid.");
+                }
             }
         }
         return this.records;
