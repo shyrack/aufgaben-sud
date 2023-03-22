@@ -57,15 +57,23 @@ public class Test {
     }
 
     private static void testPrice() {
-        MaterialReader reader = new MaterialReader("Materialpreise Oberflaechen.csv");
+        MaterialReader coatingReader = new MaterialReader("Materialpreise Oberflaechen.csv");
+        MaterialReader fillingReader = new MaterialReader("Materialpreise Fuellung.csv");
         try {
-            Map<String, Material> materialMap = reader.readFile();
-            materialMap.forEach((key, val) -> {
-                System.out.println("Material: " + key + "\t" + "Price: " + val.getPrice());
-            });
+            Map<String, Material> coatingMaterialMap = coatingReader.readFile();
+            Map<String, Material> fillingMaterialMap = fillingReader.readFile();
+            printMaterialMap(coatingMaterialMap);
+            System.out.println("-".repeat(25));
+            printMaterialMap(fillingMaterialMap);
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private static void printMaterialMap(Map<String, Material> map) {
+        map.forEach((key, val) -> {
+            System.out.println("Material: " + key + "\t\t" + "Price: " + val.getPrice());
+        });
     }
 
 }
