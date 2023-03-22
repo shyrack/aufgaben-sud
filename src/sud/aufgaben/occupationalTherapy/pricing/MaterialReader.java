@@ -8,14 +8,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ExcelBufferedReader {
+public class MaterialReader {
 
     private static final String COMMA_DELIMITER = ";";
 
     private Path file;
     private final Map<String, Material> records;
 
-    public ExcelBufferedReader(String filename) {
+    public MaterialReader(String filename) {
         this.file = Paths.get(filename);
         this.records = new HashMap<>();
     }
