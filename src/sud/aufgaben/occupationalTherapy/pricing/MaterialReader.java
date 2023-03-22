@@ -54,8 +54,8 @@ public class MaterialReader {
         return this.records;
     }
 
-    public void setFile(Path file) {
-        this.file = file;
+    public void setFile(String filename) {
+        this.file = Paths.get(filename);
     }
 
 }
