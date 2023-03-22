@@ -20,6 +20,10 @@ public class MaterialReader {
         this.records = new HashMap<>();
     }
 
+    public Material getRecord(String key) {
+        return this.records.get(key);
+    }
+
     public Map<String, Material> getRecords() {
         return this.records;
     }
