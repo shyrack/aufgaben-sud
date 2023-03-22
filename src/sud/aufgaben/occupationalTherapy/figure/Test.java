@@ -7,6 +7,7 @@ import sud.aufgaben.occupationalTherapy.form.Rectangle;
 import sud.aufgaben.occupationalTherapy.form.Triangle;
 import sud.aufgaben.occupationalTherapy.pricing.Material;
 import sud.aufgaben.occupationalTherapy.pricing.MaterialReader;
+import sud.aufgaben.occupationalTherapy.pricing.PriceCalculator;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -15,9 +16,9 @@ import java.util.Map;
 public class Test {
 
     public static void main(String[] args) {
-        // testSphere();
-        // testPyramids();
-        // testPrism();
+        testSphere();
+        testPyramids();
+        testPrism();
         testPrice();
     }
 
@@ -65,6 +66,12 @@ public class Test {
             printMaterialMap(coatingMaterialMap);
             System.out.println("-".repeat(25));
             printMaterialMap(fillingMaterialMap);
+
+            PolygonalPyramid pyramid = new PolygonalPyramid(new Polygon(15, 19), Math.PI);
+            PriceCalculator calculator = new PriceCalculator(pyramid, coatingMaterialMap.get("Lack"),
+                    fillingMaterialMap.get("Aluminium"));
+            System.out.println("-".repeat(25));
+            System.out.println("Pyramid material price: " + calculator.calculatePrice());
         } catch (IOException e) {
             e.printStackTrace();
         }
