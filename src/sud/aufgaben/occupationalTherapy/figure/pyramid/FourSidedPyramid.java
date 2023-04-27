@@ -22,9 +22,4 @@ public class FourSidedPyramid extends PyramidalFigure<Rectangle> {
                 + 2 * Triangle.area(lateralHeight, lateralHeight, super.getBase().getB());
     }
 
-    @Override
-    public String toCSV() {
-        return super.toCSV(this);
-    }
-
 }

@@ -36,9 +36,10 @@ public abstract class BasedFigure<T extends Form> extends Figure {
     @Override
     public abstract double surface();
 
-    protected String toCSV(Figure figure) {
+    @Override
+    public String toCSV() {
         return HelperFunctions.buildCSV(
-                new String[] { figure.getClass().getSimpleName(), Double.toString(this.height), this.base.toCSV() });
+                new String[] { this.getClass().getSimpleName(), Double.toString(this.height), this.base.toCSV() });
     }
 
     @Override

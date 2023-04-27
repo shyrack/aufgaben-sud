@@ -24,9 +24,4 @@ public class ThreeSidedPyramid extends PyramidalFigure<Triangle> {
         return Arrays.stream(sides).map(x -> Triangle.area(lateralHeight, lateralHeight, x)).sum();
     }
 
-    @Override
-    public String toCSV() {
-        return super.toCSV(this);
-    }
-
 }

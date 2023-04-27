@@ -22,9 +22,4 @@ public class PolygonalPyramid extends PyramidalFigure<Polygon> {
         return lateralSurfacePiece.area() * super.getBase().getN();
     }
 
-    @Override
-    public String toCSV() {
-        return super.toCSV(this);
-    }
-
 }
