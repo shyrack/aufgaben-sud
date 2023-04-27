@@ -1,5 +1,7 @@
 package sud.aufgaben.occupationalTherapy.form;
 
+import sud.aufgaben.util.HelperFunctions;
+
 public class Rectangle extends Form {
 
     private double a, b;
@@ -41,6 +43,12 @@ public class Rectangle extends Form {
         } else {
             throw new IllegalArgumentException("b must be a positive double.");
         }
+    }
+
+    @Override
+    public String toCSV() {
+        return HelperFunctions.buildCSV(
+                new String[] { this.getClass().getSimpleName(), Double.toString(this.a), Double.toString(this.b) });
     }
 
 }

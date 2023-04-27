@@ -14,6 +14,11 @@ public class Prism<T extends Form> extends BasedFigure<T> {
     }
 
     @Override
+    public String toCSV() {
+        return super.toCSV(this);
+    }
+
+    @Override
     public double volume() {
         return super.getBase().area() * super.getHeight();
     }

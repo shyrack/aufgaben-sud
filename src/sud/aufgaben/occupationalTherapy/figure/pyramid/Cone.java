@@ -18,4 +18,9 @@ public class Cone extends PyramidalFigure<Circle> {
         return Math.PI * super.getBase().getRadius() * this.lateralHeight();
     }
 
+    @Override
+    public String toCSV() {
+        return super.toCSV(this);
+    }
+
 }
