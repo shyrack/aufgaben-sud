@@ -1,9 +1,10 @@
 package sud.aufgaben.occupationalTherapy.form;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class TestFormFactory {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         FormFactory factory = new FormFactory();
         Form polygon = factory.create("polygon", scanner);

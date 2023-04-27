@@ -1,5 +1,7 @@
 package sud.aufgaben.occupationalTherapy.form;
 
+import sud.aufgaben.occupationalTherapy.Utils;
+
 public class Circle extends Form {
 
     private double radius;
@@ -28,6 +30,11 @@ public class Circle extends Form {
         } else {
             throw new IllegalArgumentException("Radius must be a positive double.");
         }
+    }
+
+    
+    public String toCsvString() {
+        return Utils.buildCSV(new String[] {this.getClass().getSimpleName(), "" + radius});
     }
 
 }

@@ -1,5 +1,6 @@
 package sud.aufgaben.occupationalTherapy.figure;
 
+import sud.aufgaben.occupationalTherapy.Utils;
 import sud.aufgaben.occupationalTherapy.form.Form;
 
 /**
@@ -48,4 +49,7 @@ public abstract class BasedFigure<T extends Form> extends Figure {
         }
     }
 
+    public String toCsvString() {
+        return Utils.buildCSV(new String[] {this.getClass().getSimpleName(), "" + this.getHeight(), this.getBase().toCsvString()});
+    }
 }

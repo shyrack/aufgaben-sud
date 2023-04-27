@@ -4,7 +4,6 @@ import sud.aufgaben.occupationalTherapy.form.Rectangle;
 import sud.aufgaben.occupationalTherapy.form.Triangle;
 
 public class FourSidedPyramid extends PyramidalFigure<Rectangle> {
-
     public FourSidedPyramid(Rectangle base, double height) {
         super(base, height);
     }
@@ -20,5 +19,4 @@ public class FourSidedPyramid extends PyramidalFigure<Rectangle> {
         double lateralHeight = this.lateralHeight();
         return 2 * Triangle.area(lateralHeight, lateralHeight, super.getBase().getA()) + 2 * Triangle.area(lateralHeight, lateralHeight, super.getBase().getB());
     }
-
 }

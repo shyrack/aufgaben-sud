@@ -1,5 +1,7 @@
 package sud.aufgaben.occupationalTherapy.form;
 
+import sud.aufgaben.occupationalTherapy.Utils;
+
 public class Polygon extends Form {
 
     private double outerRadius;
@@ -50,6 +52,10 @@ public class Polygon extends Form {
         } else {
             throw new IllegalArgumentException("Radius must be a positive double.");
         }
+    }
+
+    public String toCsvString() {
+        return Utils.buildCSV(new String[] {this.getClass().getSimpleName(), "" + n, "" + outerRadius});
     }
 
 }

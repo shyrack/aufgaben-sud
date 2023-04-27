@@ -1,5 +1,6 @@
 package sud.aufgaben.occupationalTherapy.figure;
 
+import sud.aufgaben.occupationalTherapy.CsvWriter;
 import sud.aufgaben.occupationalTherapy.figure.pyramid.*;
 import sud.aufgaben.occupationalTherapy.form.Circle;
 import sud.aufgaben.occupationalTherapy.form.Polygon;
@@ -15,7 +16,7 @@ import java.util.Map;
 
 public class Test {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         testSphere();
         testPyramids();
         testPrism();
@@ -29,7 +30,7 @@ public class Test {
         System.out.println("Volume: " + sphere.volume());
     }
 
-    private static void testPyramids() {
+    private static void testPyramids() throws IOException {
         Circle coneBase = new Circle(2.5);
         Triangle threeSidedPyramidBase = new Triangle(2, 2, 2);
         Rectangle fourSidedPyramidBase = new Rectangle(2, 2);
@@ -41,6 +42,9 @@ public class Test {
             System.out.println("Surface: " + pyramidalFigure.surface());
             System.out.println("Volume: " + pyramidalFigure.volume());
         });
+        CsvWriter<Figure> writer = new CsvWriter<Figure>("figures.csv");
+        writer.write(figures[0]);
+        writer.close();        
     }
 
     private static void testPrism() {

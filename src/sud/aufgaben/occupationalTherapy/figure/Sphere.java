@@ -1,5 +1,7 @@
 package sud.aufgaben.occupationalTherapy.figure;
 
+import sud.aufgaben.occupationalTherapy.Utils;
+
 public class Sphere extends Figure {
 
     private double radius;
@@ -29,5 +31,8 @@ public class Sphere extends Figure {
             throw new IllegalArgumentException("Radius must be a positive double.");
         }
     }
-
+    
+    public String toCsvString() {
+        return Utils.buildCSV(new String[] {this.getClass().getSimpleName(), "" + radius});
+    }
 }

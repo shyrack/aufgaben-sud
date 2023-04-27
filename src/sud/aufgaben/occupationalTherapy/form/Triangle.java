@@ -1,5 +1,7 @@
 package sud.aufgaben.occupationalTherapy.form;
 
+import sud.aufgaben.occupationalTherapy.Utils;
+
 public class Triangle extends Form {
 
     private double a, b, c;
@@ -73,4 +75,7 @@ public class Triangle extends Form {
         throw new IllegalArgumentException("Andre ist ein Dreieck, du Wicht, aber diese Werte sind es nicht.");
     }
 
+    public String toCsvString() {
+        return Utils.buildCSV(new String[] {this.getClass().getSimpleName(), "" + a, "" + b, "" + c});
+    }
 }
