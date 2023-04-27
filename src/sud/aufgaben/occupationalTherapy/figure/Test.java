@@ -18,10 +18,10 @@ import java.util.Map;
 public class Test {
 
     public static void main(String[] args) {
-        // testSphere();
-        // testPyramids();
-        // testPrism();
-        // testPrice();
+        testSphere();
+        testPyramids();
+        testPrism();
+        testPrice();
         testCSV();
     }
 
