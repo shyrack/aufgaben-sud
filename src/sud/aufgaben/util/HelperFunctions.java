@@ -1,5 +1,9 @@
 package sud.aufgaben.util;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+
 public class HelperFunctions {
 
     public static String buildCSV(String[] values) {
@@ -24,6 +28,16 @@ public class HelperFunctions {
             }
         }
         return false;
+    }
+
+    public static <T, U> List<U> map(T[] arr, Function<T, U> func) {
+        List<U> list = new ArrayList<>(arr.length);
+        for (int i = 0; i < arr.length; i++) {
+            T element = arr[i];
+            U result = func.apply(element);
+            list.add(result);
+        }
+        return list;
     }
 
 }
