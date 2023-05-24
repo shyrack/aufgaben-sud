@@ -6,12 +6,12 @@ import java.util.List;
 
 import sud.aufgaben.util.HelperFunctions;
 
-public class QueryGenerator {
+public class QueryGenerator<T> {
 
-    private final Class<?> clazz;
+    private final Class<T> clazz;
     private final List<String> createdTables;
 
-    public QueryGenerator(Class<?> clazz) {
+    public QueryGenerator(Class<T> clazz) {
         this.clazz = clazz;
         this.createdTables = new ArrayList<>();
     }
@@ -76,7 +76,7 @@ public class QueryGenerator {
     }
 
     public static void main(String[] args) {
-        QueryGenerator generator = new QueryGenerator(Test.class);
+        QueryGenerator<Test> generator = new QueryGenerator<>(Test.class);
         generator.generateTableCreateQueries().forEach(query -> System.out.println(query));
     }
 
