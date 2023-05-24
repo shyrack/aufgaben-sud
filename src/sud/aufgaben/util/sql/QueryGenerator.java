@@ -2,38 +2,50 @@ package sud.aufgaben.util.sql;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import sud.aufgaben.util.HelperFunctions;
 
 public class QueryGenerator {
 
-    private final List<String> tables;
+    private final Class<?> clazz;
+    private final List<String> createdTables;
 
     public QueryGenerator(Class<?> clazz) {
-        this.tables = new ArrayList<>();
+        this.clazz = clazz;
+        this.createdTables = new ArrayList<>();
     }
 
-    public String generateTableCreateQuery(Class<?> clazz) {
+    public List<String> generateTableCreateQueries() {
+        return this.generateTableCreateQueries(this.clazz, new ArrayList<>());
+    }
+
+    public void reset() {
+        this.createdTables.clear();
+    }
+
+    private List<String> generateTableCreateQueries(Class<?> clazz, List<String> tableQueries) {
         String simpleName = clazz.getSimpleName();
         Field[] fields = clazz.getDeclaredFields();
+
+        createdTables.add(clazz.getName());
+
         List<Column> columns = HelperFunctions.map(fields, (field) -> {
             String fieldName = field.getName();
             Class<?> type = field.getType();
-            return this.convertJavaToSQL_Type(fieldName, type);
+            return this.convertJavaToSQL_Type(fieldName, type, tableQueries);
         });
         Column[] columnArr = new Column[columns.size()];
 
         columns.toArray(columnArr);
 
         Table table = new Table(simpleName, columnArr);
+        tableQueries.add(table.generateCreateTableQuery());
 
-        return table.generateCreateTableQuery();
+        return tableQueries;
     }
 
-    private Column convertJavaToSQL_Type(String fieldName, Class<?> type) {
+    private Column convertJavaToSQL_Type(String fieldName, Class<?> type, List<String> tableQueries) {
         String sqlType;
 
         if (type == byte.class || type == Byte.class) {
@@ -55,8 +67,8 @@ public class QueryGenerator {
         } else if (type == String.class) {
             sqlType = "VARCHAR(255)";
         } else {
-            if (!this.tables.containsKey(fieldName))
-                this.generateTableCreateQuery(type);
+            if (!this.createdTables.contains(type.getName()))
+                this.generateTableCreateQueries(type, tableQueries);
             return new Column(fieldName, "VARCHAR(255)");
         }
 
@@ -64,9 +76,8 @@ public class QueryGenerator {
     }
 
     public static void main(String[] args) {
-        QueryGenerator generator = new QueryGenerator();
-        String createTableQuery = generator.generateTableCreateQuery(Test.class);
-        System.out.println(createTableQuery);
+        QueryGenerator generator = new QueryGenerator(Test.class);
+        generator.generateTableCreateQueries().forEach(query -> System.out.println(query));
     }
 
 }
