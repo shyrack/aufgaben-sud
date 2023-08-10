@@ -16,6 +16,24 @@ public class QueryGenerator<T> {
         this.createdTables = new ArrayList<>();
     }
 
+    public List<String> generateTableInsertQueries(T object) {
+        String tableName = this.clazz.getSimpleName();
+        Field[] fields = object.getClass().getFields();
+        List<Cell> cells = HelperFunctions.map(fields, (field) -> {
+            String fieldName = field.getName();
+            try {
+                Object value = field.get(object);
+                return new Cell(fieldName, value);
+            } catch (IllegalAccessException | IllegalArgumentException e) {
+                e.printStackTrace();
+                return null;
+            }
+        });
+        
+
+        return new ArrayList<>();
+    }
+
     public List<String> generateTableCreateQueries() {
         return this.generateTableCreateQueries(this.clazz, new ArrayList<>());
     }
