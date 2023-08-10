@@ -20,7 +20,8 @@ public class LegoKomposition extends LegoBauteil {
         return Math.round(rawPrice * 100)/100.0;
     }
 
-    public void addTeil(LegoBauteil teil) {
+    public LegoKomposition addTeil(LegoBauteil teil) {
         this.teile.add(teil);
+        return this;
     }    
 }

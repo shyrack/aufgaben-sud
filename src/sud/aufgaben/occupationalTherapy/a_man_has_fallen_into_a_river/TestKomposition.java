@@ -21,8 +21,9 @@ public class TestKomposition {
     private static void TestKleineKomposition() throws Exception {
         System.out.println("-------TEST KLEINE KOMPOSITION-------");
 
-        kleineKomposition.addTeil(roterStein);
-        kleineKomposition.addTeil(blauerStein);
+        kleineKomposition
+            .addTeil(roterStein)
+            .addTeil(blauerStein);
 
         assertPreis(kleineKomposition, 0.15);
     }
@@ -30,9 +31,10 @@ public class TestKomposition {
     private static void TestKompositionMitKomposition() throws Exception {
         System.out.println("-------TEST GROSSE KOMPOSITION-------");
 
-        grosseKomposition.addTeil(goldenerStein);
-        grosseKomposition.addTeil(blauerStein);
-        grosseKomposition.addTeil(kleineKomposition);
+        grosseKomposition
+            .addTeil(goldenerStein)
+            .addTeil(blauerStein)
+            .addTeil(kleineKomposition);
 
         assertPreis(grosseKomposition, 50.25);
     }
