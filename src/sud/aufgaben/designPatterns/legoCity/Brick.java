@@ -11,8 +11,16 @@ public class Brick extends Part {
         this.size = size;
     }
 
+    public String getColor() {
+        return this.color;
+    }
+
     @Override
     public double getPrice() {
         return this.price;
+    }
+
+    public int getSize() {
+        return this.size;
     }
 }
