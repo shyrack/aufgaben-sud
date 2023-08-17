@@ -18,7 +18,6 @@ public class CurrentConditions implements Observer<WeatherData> {
         this.label.setText("Air pressure: " + weatherData.getAirPressure() + "hPa\n" + "Humidity: "
                 + weatherData.getHumidity() + "%\n" + "Temperature: " + weatherData.getTemperature() + "°C");
         this.label.updateUI();
-        System.out.println("Something got updated.");
     }
 
 }
