@@ -2,6 +2,9 @@ package sud.aufgaben.designPatterns.weather;
 
 import java.util.Random;
 
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 public class Main {
     static Random zM = new Random();
 
@@ -9,12 +12,20 @@ public class Main {
 
         System.out.println("--------------WETTERSTATION TESTLAUF--------------");
 
+        JFrame frame = new JFrame();
+        JLabel currentConditionsLabel = new JLabel("Default text value for JLabel component.");
+        // JLabel weatherForecastLabel = new JLabel();
         WeatherData weatherData = new WeatherData(26, 20, 1000);
-        CurrentConditions currentWeatherConditions = new CurrentConditions();
-        WeatherForecast weatherForecast = new WeatherForecast();
+        CurrentConditions currentWeatherConditions = new CurrentConditions(currentConditionsLabel);
+        // WeatherForecast weatherForecast = new WeatherForecast(weatherForecastLabel);
+
+        frame.add(currentConditionsLabel);
+        // frame.add(weatherForecastLabel);
+        frame.pack();
+        frame.setVisible(true);
 
         weatherData.addObserver(currentWeatherConditions);
-        weatherData.addObserver(weatherForecast);
+        // weatherData.addObserver(weatherForecast);
 
         try {
             for (int i = 0; i < 50; i++) {
@@ -41,7 +52,7 @@ public class Main {
             System.out.println("Things got removed, tho!");
 
             weatherData.removeObserver(currentWeatherConditions);
-            weatherData.removeObserver(weatherForecast);
+            // weatherData.removeObserver(weatherForecast);
             Thread.sleep(500);
             weatherData.setData(28, 16, 78);
         } catch (InterruptedException e) {
