@@ -21,11 +21,12 @@ public class in_lego_city {
     private static LegoBauteil getRaum(int anzahlMauern) {
         LegoKomposition raum = new LegoKomposition();
         for (int i = 0; i < anzahlMauern; i++) {
-            raum.addTeil(getWand());
+            raum.addTeil(getWand(500));
         }
+        return raum;
     }
 
     private static LegoBauteil getHaus(){
-
+        return new Legostein("rot", 20, 0.05);
     };
 }
