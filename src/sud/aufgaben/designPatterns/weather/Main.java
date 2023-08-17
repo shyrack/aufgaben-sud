@@ -52,10 +52,9 @@ public class Main {
                 Thread.sleep(1000);
             }
 
-            System.out.println("Things got removed, tho!");
-
             weatherData.removeObserver(currentWeatherConditions);
             weatherData.removeObserver(weatherForecast);
+            System.out.println("Things got removed, tho!");
             Thread.sleep(500);
             weatherData.setData(28, 16, 78);
         } catch (InterruptedException e) {
