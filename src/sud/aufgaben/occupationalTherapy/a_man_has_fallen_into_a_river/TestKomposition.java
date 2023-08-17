@@ -2,10 +2,10 @@ package sud.aufgaben.occupationalTherapy.a_man_has_fallen_into_a_river;
 
 public class TestKomposition {
     private static Legostein roterStein = new Legostein("rot", 10, 0.05);
-    private static Legostein blauerStein = new Legostein("blauer", 10, 0.1);
+    private static Legostein blauerStein = new Legostein("blau", 10, 0.1);
     private static Legostein goldenerStein = new Legostein("gold", 20, 50);
     private static LegoKomposition kleineKomposition = new LegoKomposition();
-    private static LegoKomposition großeKomposition = new LegoKomposition();
+    private static LegoKomposition grosseKomposition = new LegoKomposition();
 
     public static void main(String[] args) throws Exception {
         TestLegostein();
@@ -21,8 +21,9 @@ public class TestKomposition {
     private static void TestKleineKomposition() throws Exception {
         System.out.println("-------TEST KLEINE KOMPOSITION-------");
 
-        kleineKomposition.addTeil(roterStein);
-        kleineKomposition.addTeil(blauerStein);
+        kleineKomposition
+            .addTeil(roterStein)
+            .addTeil(blauerStein);
 
         assertPreis(kleineKomposition, 0.15);
     }
@@ -30,11 +31,12 @@ public class TestKomposition {
     private static void TestKompositionMitKomposition() throws Exception {
         System.out.println("-------TEST GROSSE KOMPOSITION-------");
 
-        großeKomposition.addTeil(goldenerStein);
-        großeKomposition.addTeil(blauerStein);
-        großeKomposition.addTeil(kleineKomposition);
+        grosseKomposition
+            .addTeil(goldenerStein)
+            .addTeil(blauerStein)
+            .addTeil(kleineKomposition);
 
-        assertPreis(großeKomposition, 50.25);
+        assertPreis(grosseKomposition, 50.25);
     }
 
     private static void assertPreis(LegoBauteil teil, double expected) throws Exception {
