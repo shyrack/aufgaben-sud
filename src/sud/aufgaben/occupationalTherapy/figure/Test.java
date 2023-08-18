@@ -6,10 +6,13 @@ import sud.aufgaben.occupationalTherapy.form.Circle;
 import sud.aufgaben.occupationalTherapy.form.Polygon;
 import sud.aufgaben.occupationalTherapy.form.Rectangle;
 import sud.aufgaben.occupationalTherapy.form.Triangle;
+import sud.aufgaben.occupationalTherapy.figure.Figure;
 import sud.aufgaben.occupationalTherapy.pricing.Material;
 import sud.aufgaben.occupationalTherapy.pricing.MaterialReader;
 import sud.aufgaben.occupationalTherapy.pricing.PriceCalculator;
+import sud.aufgaben.util.CSVWriter;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Map;
@@ -21,6 +24,7 @@ public class Test {
         testPyramids();
         testPrism();
         testPrice();
+        testCSV();
     }
 
     private static void testSphere() {
@@ -85,6 +89,19 @@ public class Test {
         map.forEach((key, val) -> {
             System.out.println("Material: " + key + "\t\t" + "Price: " + val.getPrice());
         });
+    }
+
+    private static void testCSV() {
+        try (CSVWriter<Figure> writer = new CSVWriter<>(new File("./generated.csv"))) {
+            Polygon polygon = new Polygon(5, 5);
+            PolygonalPyramid pyramid = new PolygonalPyramid(polygon, 5);
+            Sphere sphere = new Sphere(5);
+
+            writer.writeT(pyramid);
+            writer.writeT(sphere);
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
     }
 
 }

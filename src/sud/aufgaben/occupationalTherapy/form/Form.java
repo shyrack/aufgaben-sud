@@ -1,11 +1,11 @@
 package sud.aufgaben.occupationalTherapy.form;
 
-import sud.aufgaben.occupationalTherapy.CsvWritable;
+import sud.aufgaben.occupationalTherapy.CSVWritable;
 
 /**
  * Superclass for the purpose of implementing standardized form subclasses.
  */
-public abstract class Form implements CsvWritable {
+public abstract class Form implements CSVWritable {
 
     /**
      * Calculates the area of the form.

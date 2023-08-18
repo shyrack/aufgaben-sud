@@ -1,6 +1,6 @@
 package sud.aufgaben.occupationalTherapy.form;
 
-import sud.aufgaben.occupationalTherapy.Utils;
+import sud.aufgaben.util.HelperFunctions;
 
 public class Polygon extends Form {
 
@@ -54,8 +54,10 @@ public class Polygon extends Form {
         }
     }
 
-    public String toCsvString() {
-        return Utils.buildCSV(new String[] {this.getClass().getSimpleName(), "" + n, "" + outerRadius});
+    @Override
+    public String toCSV() {
+        return HelperFunctions.buildCSV(new String[] { this.getClass().getSimpleName(), Integer.toString(this.n),
+                Double.toString(this.outerRadius) });
     }
 
 }

@@ -1,11 +1,11 @@
 package sud.aufgaben.occupationalTherapy.figure;
 
-import sud.aufgaben.occupationalTherapy.CsvWritable;
+import sud.aufgaben.occupationalTherapy.CSVWritable;
 
 /**
  * Superclass for the purpose of implementing standardized figure subclasses.
  */
-public abstract class Figure implements CsvWritable {
+public abstract class Figure implements CSVWritable {
 
     /**
      * Calculates the surface of the figure.

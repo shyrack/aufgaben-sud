@@ -17,6 +17,7 @@ public class FourSidedPyramid extends PyramidalFigure<Rectangle> {
     @Override
     public double lateralSurface() {
         double lateralHeight = this.lateralHeight();
-        return 2 * Triangle.area(lateralHeight, lateralHeight, super.getBase().getA()) + 2 * Triangle.area(lateralHeight, lateralHeight, super.getBase().getB());
+        return 2 * Triangle.area(lateralHeight, lateralHeight, super.getBase().getA())
+                + 2 * Triangle.area(lateralHeight, lateralHeight, super.getBase().getB());
     }
 }

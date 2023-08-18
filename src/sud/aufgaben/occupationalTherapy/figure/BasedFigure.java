@@ -2,9 +2,11 @@ package sud.aufgaben.occupationalTherapy.figure;
 
 import sud.aufgaben.occupationalTherapy.Utils;
 import sud.aufgaben.occupationalTherapy.form.Form;
+import sud.aufgaben.util.HelperFunctions;
 
 /**
- * Superclass for the purpose of implementing standardized figure subclasses with a base.
+ * Superclass for the purpose of implementing standardized figure subclasses
+ * with a base.
  *
  * @param <T> Represents the base area of the figure.
  */
@@ -15,7 +17,8 @@ public abstract class BasedFigure<T extends Form> extends Figure {
 
     /**
      * Constructor of the BasedFigure class
-     * @param base Base of the figure
+     * 
+     * @param base   Base of the figure
      * @param height Height of the figure
      */
     public BasedFigure(T base, double height) {
@@ -35,6 +38,12 @@ public abstract class BasedFigure<T extends Form> extends Figure {
     public abstract double surface();
 
     @Override
+    public String toCSV() {
+        return HelperFunctions.buildCSV(
+                new String[] { this.getClass().getSimpleName(), Double.toString(this.height), this.base.toCSV() });
+    }
+
+    @Override
     abstract public double volume();
 
     public void setBase(T base) {
@@ -47,9 +56,5 @@ public abstract class BasedFigure<T extends Form> extends Figure {
         } else {
             throw new IllegalArgumentException("Height must be a positive number.");
         }
-    }
-
-    public String toCsvString() {
-        return Utils.buildCSV(new String[] {this.getClass().getSimpleName(), "" + this.getHeight(), this.getBase().toCsvString()});
     }
 }

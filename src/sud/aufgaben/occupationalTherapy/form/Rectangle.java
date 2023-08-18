@@ -1,6 +1,6 @@
 package sud.aufgaben.occupationalTherapy.form;
 
-import sud.aufgaben.occupationalTherapy.Utils;
+import sud.aufgaben.util.HelperFunctions;
 
 public class Rectangle extends Form {
 
@@ -45,8 +45,10 @@ public class Rectangle extends Form {
         }
     }
 
-    public String toCsvString() {
-        return Utils.buildCSV(new String[] {this.getClass().getSimpleName(), "" + a, "" + b});
+    @Override
+    public String toCSV() {
+        return HelperFunctions.buildCSV(
+                new String[] { this.getClass().getSimpleName(), Double.toString(this.a), Double.toString(this.b) });
     }
 
 }
