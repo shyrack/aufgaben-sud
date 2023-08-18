@@ -5,6 +5,7 @@ public class WeatherData extends Subject<WeatherData> {
 	private float temperatur;
 	private float feuchtigkeit;
 	private float luftdruck;
+
 	public WeatherData(int t, int f, int l) {
 		this.setMesswerte(t, f, l);
 	}
