@@ -20,9 +20,12 @@ public class Main_WetterstationTestlauf {
 		wetterDaten.addObserver(aktuell);
 		wetterDaten.addObserver(vorhersage);
 
+		new WetterApp(aktuell, vorhersage);
+
 //ROL ENDE
 		try {
 			for (int i = 0; i < 50; i++) {
+				System.out.println("-------------------------");
 				int welcher = zM.nextInt(3);
 				float wert = 0f;
 				switch (welcher) {

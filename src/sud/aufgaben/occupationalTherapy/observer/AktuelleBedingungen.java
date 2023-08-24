@@ -1,10 +1,18 @@
 package sud.aufgaben.occupationalTherapy.observer;
 
-public class AktuelleBedingungen implements Observer<WeatherData> {
+import javax.swing.JLabel;
+
+public class AktuelleBedingungen extends JLabel implements Observer<WeatherData> {
+    public AktuelleBedingungen() {
+        super("Es sind noch keine aktuellen Bedingungen vorhanden");
+    }
+
     public void update(WeatherData info) {
-        System.out.println("-----AKTUELLE BEDINGUNGEN-----");
-        System.out.println("Temperatur: " + info.getTemperatur() + "C");
-        System.out.println("Feuchtigkeit: " + info.getFeuchtigkeit() + "%");
-        System.out.println("Luftdruck: " + info.getLuftdruck() + "hPa");
+        String text = "Aktuelle Bedingungen:<br/>"
+                    + "Temparatur: \t" + info.getTemperatur() + "C<br/>"
+                    + "Feuchtigkeit: \t" + info.getFeuchtigkeit() + "%<br/>"
+                    + "Luftdruck: \t" + info.getLuftdruck() + "hPa<br/>";
+        this.setText("<html>" + text + "<br/></html>");
+        System.out.println(text.replace("<br/>", "\n"));
     }
 }

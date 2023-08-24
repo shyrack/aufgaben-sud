@@ -1,10 +1,28 @@
 package sud.aufgaben.occupationalTherapy.observer;
 
-public class WetterVorhersage implements Observer<WeatherData>{
+import javax.swing.JLabel;
+
+public class WetterVorhersage extends JLabel implements Observer<WeatherData> {
+    private float prevLuftdruck = 1000.0f;
+
+    public WetterVorhersage() {
+        super("Es sind noch keine Vorhersagen vorhanden.");
+    }
+
     public void update(WeatherData info) {
-        System.out.println("-----VORHERSAGE-----");
-        System.out.println("Temperatur: \t" + info.getTemperatur() + "C");
-        System.out.println("Feuchtigkeit: \t" + info.getFeuchtigkeit() + "%");
-        System.out.println("Luftdruck: " + info.getLuftdruck() + "hPa");
+        float currLuftdruck = info.getLuftdruck();
+        String text = "Vorhersage:<br/>";
+        if (currLuftdruck > prevLuftdruck) {
+            text += "Das Wetter bessert sich! :)";
+        } else if (currLuftdruck < prevLuftdruck) {
+            text += "Das Wetter verschlechtert sich! :(";
+        } else {
+            text += "Das Wetter bleibt gleich! :|";
+        }
+
+        this.setText("<html>" + text + "</html>");
+        System.out.println(text.replace("<br/>", "\n"));
+
+        prevLuftdruck = currLuftdruck;
     }
 }
