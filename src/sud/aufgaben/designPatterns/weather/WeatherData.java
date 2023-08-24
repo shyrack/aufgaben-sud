@@ -14,6 +14,7 @@ public class WeatherData extends Subject<WeatherData> {
         this.temperature = temperature;
         this.humidity = humidity;
         this.airPressure = airPressure;
+        this.notifyObservers();
     }
 
     public void setTemperature(float temperature) {
