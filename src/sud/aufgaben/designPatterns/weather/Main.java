@@ -24,6 +24,7 @@ public class Main {
         panel.add(currentConditionsLabel);
         panel.add(weatherForecastLabel);
         frame.add(panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
 

@@ -4,16 +4,24 @@ import javax.swing.JLabel;
 
 public class WeatherForecast implements Observer<WeatherData> {
     private JLabel label;
+    private float previousAirPressure;
 
     public WeatherForecast(JLabel label) {
         this.label = label;
+        this.previousAirPressure = 1000;
     }
 
     public void update(WeatherData weatherData) {
-        // System.out.println("WeatherData.java got called with some serious data!");
-        // System.out.println("Air pressure: " + weatherData.getAirPressure());
-        // System.out.println("Humidity: " + weatherData.getHumidity());
-        // System.out.println("Temperature: " + weatherData.getTemperature());
+        float airPressureChange = this.previousAirPressure - weatherData.getAirPressure();
+
+        if (airPressureChange > 0) {
+            this.label.setText("The weather is getting better!");
+        } else if (airPressureChange < 0) {
+            this.label.setText("The weather is getting worse!");
+        } else {
+            this.label.setText("The weather conditions are not changing!");
+        }
+        this.previousAirPressure = weatherData.getAirPressure();
     }
 
 }
