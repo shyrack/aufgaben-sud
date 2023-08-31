@@ -18,5 +18,9 @@ public abstract class Subject<T> {
         this.observers.remove(observer);
     }
 
+    public List<Observer<T>> getObservers() {
+        return this.observers;
+    }
+
     public abstract void notifyObservers();
 }
