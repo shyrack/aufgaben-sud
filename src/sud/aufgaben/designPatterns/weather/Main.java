@@ -4,7 +4,6 @@ import java.util.Random;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 public class Main {
     static Random zM = new Random();
@@ -13,20 +12,17 @@ public class Main {
 
         System.out.println("--------------WETTERSTATION TESTLAUF--------------");
 
-        JFrame frame = new JFrame();
-        JPanel panel = new JPanel();
         JLabel currentConditionsLabel = new JLabel("Default text value for JLabel component.");
         JLabel weatherForecastLabel = new JLabel();
         WeatherData weatherData = new WeatherData(26, 20, 1000);
+        WeatherApp app = new WeatherApp(weatherData);
         CurrentConditions currentWeatherConditions = new CurrentConditions(currentConditionsLabel);
         WeatherForecast weatherForecast = new WeatherForecast(weatherForecastLabel);
 
-        panel.add(currentConditionsLabel);
-        panel.add(weatherForecastLabel);
-        frame.add(panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+        app.getPanel().add(currentConditionsLabel);
+        app.getPanel().add(weatherForecastLabel);
+        app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        app.setVisible(true);
 
         weatherData.addObserver(currentWeatherConditions);
         weatherData.addObserver(weatherForecast);
@@ -53,8 +49,6 @@ public class Main {
                 Thread.sleep(1000);
             }
 
-            weatherData.removeObserver(currentWeatherConditions);
-            weatherData.removeObserver(weatherForecast);
             System.out.println("Things got removed, tho!");
             Thread.sleep(500);
             weatherData.setData(28, 16, 78);
