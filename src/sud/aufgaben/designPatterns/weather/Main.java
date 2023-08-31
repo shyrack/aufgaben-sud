@@ -9,7 +9,6 @@ public class Main {
     static Random zM = new Random();
 
     public static void main(String[] args) {
-
         System.out.println("--------------WETTERSTATION TESTLAUF--------------");
 
         JLabel currentConditionsLabel = new JLabel("Default text value for JLabel component.");
