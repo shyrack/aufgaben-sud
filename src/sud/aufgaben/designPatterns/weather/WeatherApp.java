@@ -45,11 +45,11 @@ public class WeatherApp extends JFrame {
                 this.previousObservers.addAll(WeatherApp.this.weatherData.getObservers());
 
                 for (Observer<WeatherData> observer : WeatherApp.this.weatherData.getObservers()) {
-                    weatherData.removeObserver(observer);
+                    WeatherApp.this.weatherData.removeObserver(observer);
                 }
             } else {
                 for (Observer<WeatherData> observer : this.previousObservers) {
-                    weatherData.addObserver(observer);
+                    WeatherApp.this.weatherData.addObserver(observer);
                 }
             }
             this.registered = !this.registered;
