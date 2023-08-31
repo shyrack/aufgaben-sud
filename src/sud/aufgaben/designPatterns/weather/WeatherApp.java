@@ -2,6 +2,8 @@ package sud.aufgaben.designPatterns.weather;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -28,18 +30,25 @@ public class WeatherApp extends JFrame {
 
     private class ToggleRegisterListener implements ActionListener {
         private boolean registered;
+        private List<Observer<WeatherData>> previousObservers;
 
         public ToggleRegisterListener() {
             super();
             this.registered = true;
+            this.previousObservers = new ArrayList<>();
         }
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            for (Observer<WeatherData> observer : weatherData.getObservers()) {
-                if (this.registered) {
+            if (this.registered) {
+                this.previousObservers.clear();
+                this.previousObservers.addAll(WeatherApp.this.weatherData.getObservers());
+
+                for (Observer<WeatherData> observer : WeatherApp.this.weatherData.getObservers()) {
                     weatherData.removeObserver(observer);
-                } else {
+                }
+            } else {
+                for (Observer<WeatherData> observer : this.previousObservers) {
                     weatherData.addObserver(observer);
                 }
             }
