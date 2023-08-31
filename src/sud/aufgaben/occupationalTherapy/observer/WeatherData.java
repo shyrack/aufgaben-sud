@@ -14,22 +14,22 @@ public class WeatherData extends Subject<WeatherData> {
 		this.temperatur = temp;
 		this.feuchtigkeit = feucht;
 		this.luftdruck = luft;
-		this.notifyObservers();
+		this.notifyObservers(this);
 	}
 
 	public void setTemperatur(float temparatur) {
 		this.temperatur = temparatur;
-		this.notifyObservers();
+		this.notifyObservers(this);
 	}
 
 	public void setFeuchtigkeit(float feuchtigkeit) {
 		this.feuchtigkeit = feuchtigkeit;
-		this.notifyObservers();
+		this.notifyObservers(this);
 	}
 
 	public void setLuftdruck(float luftdruck) {
 		this.luftdruck = luftdruck;
-		this.notifyObservers();
+		this.notifyObservers(this);
 	}
 
 	public float getFeuchtigkeit() {
@@ -42,11 +42,5 @@ public class WeatherData extends Subject<WeatherData> {
 
 	public float getLuftdruck() {
 		return luftdruck;
-	}
-
-	public void notifyObservers() {
-		for (Observer<WeatherData> ob : observers) {
-			ob.update(this);
-		}
 	}
 }
