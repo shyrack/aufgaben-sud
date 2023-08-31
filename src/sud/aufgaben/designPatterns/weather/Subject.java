@@ -1,13 +1,14 @@
 package sud.aufgaben.designPatterns.weather;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public abstract class Subject<T> {
     protected List<Observer<T>> observers;
 
     public Subject() {
-        this.observers = new ArrayList<>();
+        this.observers = Collections.synchronizedList(new ArrayList<>());
     }
 
     public void addObserver(Observer<T> observer) {

@@ -3,6 +3,7 @@ package sud.aufgaben.designPatterns.weather;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.swing.JButton;
@@ -35,7 +36,7 @@ public class WeatherApp extends JFrame {
         public ToggleRegisterListener() {
             super();
             this.registered = true;
-            this.previousObservers = new ArrayList<>();
+            this.previousObservers = Collections.synchronizedList(new ArrayList<>());
         }
 
         @Override

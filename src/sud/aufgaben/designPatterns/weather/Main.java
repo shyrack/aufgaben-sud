@@ -28,7 +28,7 @@ public class Main {
         weatherData.addObserver(weatherForecast);
 
         try {
-            for (int i = 0; i < 50; i++) {
+            for (int i = 0; i < 180; i++) {
                 int welcher = zM.nextInt(3);
                 float wert = 0f;
                 switch (welcher) {
