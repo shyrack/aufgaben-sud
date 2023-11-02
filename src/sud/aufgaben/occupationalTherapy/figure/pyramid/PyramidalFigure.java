@@ -1,7 +1,7 @@
-package sud.aufgaben.occupationalTherapy.figure.pyramid;
+package occupationalTherapy.figure.pyramid;
 
-import sud.aufgaben.occupationalTherapy.figure.BasedFigure;
-import sud.aufgaben.occupationalTherapy.form.Form;
+import occupationalTherapy.figure.BasedFigure;
+import occupationalTherapy.form.Form;
 
 /**
  * Superclass for the purpose of implementing standardized figure subclasses with a base.

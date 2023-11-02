@@ -1,4 +1,4 @@
-package sud.aufgaben.dog;
+package dog;
 
 /**
  * @class Hund

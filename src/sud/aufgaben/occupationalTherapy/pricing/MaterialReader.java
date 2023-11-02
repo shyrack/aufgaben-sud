@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy.pricing;
+package occupationalTherapy.pricing;
 
 import java.io.IOException;
 import java.nio.file.Files;

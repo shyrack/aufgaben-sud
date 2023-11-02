@@ -1,6 +1,6 @@
-package sud.aufgaben.occupationalTherapy.form;
+package occupationalTherapy.form;
 
-import sud.aufgaben.occupationalTherapy.CSVWritable;
+import occupationalTherapy.CSVWritable;
 
 /**
  * Superclass for the purpose of implementing standardized form subclasses.

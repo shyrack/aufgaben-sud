@@ -1,4 +1,4 @@
-package sud.aufgaben.designPatterns.legoCity;
+package designPatterns.legoCity;
 
 public class Main {
     private static Part createBrick() {

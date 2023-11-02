@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy.observer;
+package occupationalTherapy.observer;
 
 public interface Observer<T> {
     void update(T info);

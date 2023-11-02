@@ -1,7 +1,7 @@
-package sud.aufgaben.occupationalTherapy.container.kfz;
+package occupationalTherapy.container.kfz;
 
-import sud.aufgaben.occupationalTherapy.container.mitarbeiter.Fahrer;
-import sud.aufgaben.occupationalTherapy.container.utilities.GPS;
+import occupationalTherapy.container.mitarbeiter.Fahrer;
+import occupationalTherapy.container.utilities.GPS;
 
 public abstract class Kfz implements Comparable<Kfz> {
     private double tankGroesse;

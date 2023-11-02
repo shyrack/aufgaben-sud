@@ -1,9 +1,9 @@
-package sud.aufgaben.occupationalTherapy.form;
+package occupationalTherapy.form;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-import sud.aufgaben.occupationalTherapy.Factory;
+import occupationalTherapy.Factory;
 
 public class FormFactory implements Factory<Form> {
 

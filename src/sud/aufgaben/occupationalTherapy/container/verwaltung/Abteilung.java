@@ -1,7 +1,7 @@
-package sud.aufgaben.occupationalTherapy.container.verwaltung;
+package occupationalTherapy.container.verwaltung;
 
-import sud.aufgaben.occupationalTherapy.container.mitarbeiter.Manager;
-import sud.aufgaben.occupationalTherapy.container.mitarbeiter.Mitarbeiter;
+import occupationalTherapy.container.mitarbeiter.Manager;
+import occupationalTherapy.container.mitarbeiter.Mitarbeiter;
 
 import java.util.Set;
 import java.util.TreeSet;

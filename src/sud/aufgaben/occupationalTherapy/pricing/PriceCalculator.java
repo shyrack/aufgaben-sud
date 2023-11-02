@@ -1,6 +1,6 @@
-package sud.aufgaben.occupationalTherapy.pricing;
+package occupationalTherapy.pricing;
 
-import sud.aufgaben.occupationalTherapy.figure.Figure;
+import occupationalTherapy.figure.Figure;
 
 public class PriceCalculator {
     

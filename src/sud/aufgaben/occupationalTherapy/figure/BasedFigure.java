@@ -1,8 +1,8 @@
-package sud.aufgaben.occupationalTherapy.figure;
+package occupationalTherapy.figure;
 
-import sud.aufgaben.occupationalTherapy.Utils;
-import sud.aufgaben.occupationalTherapy.form.Form;
-import sud.aufgaben.util.HelperFunctions;
+import occupationalTherapy.Utils;
+import occupationalTherapy.form.Form;
+import util.HelperFunctions;
 
 /**
  * Superclass for the purpose of implementing standardized figure subclasses

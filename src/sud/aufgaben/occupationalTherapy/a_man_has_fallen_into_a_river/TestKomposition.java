@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy.a_man_has_fallen_into_a_river;
+package occupationalTherapy.a_man_has_fallen_into_a_river;
 
 public class TestKomposition {
     private static Legostein roterStein = new Legostein("rot", 10, 0.05);

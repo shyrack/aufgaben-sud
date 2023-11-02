@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy.observer;
+package occupationalTherapy.observer;
 
 import java.util.Random;
 

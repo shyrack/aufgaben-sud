@@ -1,8 +1,8 @@
-package sud.aufgaben.occupationalTherapy.container.verwaltung;
+package occupationalTherapy.container.verwaltung;
 
-import sud.aufgaben.occupationalTherapy.container.kfz.Kfz;
-import sud.aufgaben.occupationalTherapy.container.mitarbeiter.Mitarbeiter;
-import sud.aufgaben.occupationalTherapy.container.mitarbeiter.SchichtArbeiter;
+import occupationalTherapy.container.kfz.Kfz;
+import occupationalTherapy.container.mitarbeiter.Mitarbeiter;
+import occupationalTherapy.container.mitarbeiter.SchichtArbeiter;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

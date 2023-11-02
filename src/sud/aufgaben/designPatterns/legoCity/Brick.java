@@ -1,4 +1,4 @@
-package sud.aufgaben.designPatterns.legoCity;
+package designPatterns.legoCity;
 
 public class Brick extends Part {
     private String color;

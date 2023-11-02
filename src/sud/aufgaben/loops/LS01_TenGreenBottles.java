@@ -1,4 +1,4 @@
-package sud.aufgaben.loops;
+package loops;
 
 public class LS01_TenGreenBottles {
     private static final String[] NUMS = {"No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"};

@@ -1,6 +1,6 @@
-package sud.aufgaben.occupationalTherapy.figure;
+package occupationalTherapy.figure;
 
-import sud.aufgaben.occupationalTherapy.CSVWritable;
+import occupationalTherapy.CSVWritable;
 
 /**
  * Superclass for the purpose of implementing standardized figure subclasses.

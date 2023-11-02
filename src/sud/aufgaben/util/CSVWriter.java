@@ -1,11 +1,11 @@
-package sud.aufgaben.util;
+package util;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import sud.aufgaben.occupationalTherapy.CSVWritable;
+import occupationalTherapy.CSVWritable;
 
 public class CSVWriter<T extends CSVWritable> extends BufferedWriter {
 

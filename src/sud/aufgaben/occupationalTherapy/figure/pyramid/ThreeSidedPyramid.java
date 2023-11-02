@@ -1,8 +1,8 @@
-package sud.aufgaben.occupationalTherapy.figure.pyramid;
+package occupationalTherapy.figure.pyramid;
 
 import java.util.Arrays;
 
-import sud.aufgaben.occupationalTherapy.form.Triangle;
+import occupationalTherapy.form.Triangle;
 
 public class ThreeSidedPyramid extends PyramidalFigure<Triangle> {
 

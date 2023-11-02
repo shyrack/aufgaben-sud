@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy.container.mitarbeiter;
+package occupationalTherapy.container.mitarbeiter;
 
 import java.util.Comparator;
 

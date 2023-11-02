@@ -1,4 +1,4 @@
-package sud.aufgaben.car;
+package car;
 
 public class Car {
 

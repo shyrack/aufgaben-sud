@@ -1,4 +1,4 @@
-package sud.aufgaben.recursion;
+package recursion;
 
 public class Fibonacci {
 

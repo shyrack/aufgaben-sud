@@ -1,7 +1,7 @@
-package sud.aufgaben.occupationalTherapy.figure.pyramid;
+package occupationalTherapy.figure.pyramid;
 
-import sud.aufgaben.occupationalTherapy.form.Polygon;
-import sud.aufgaben.occupationalTherapy.form.Triangle;
+import occupationalTherapy.form.Polygon;
+import occupationalTherapy.form.Triangle;
 
 public class PolygonalPyramid extends PyramidalFigure<Polygon> {
 

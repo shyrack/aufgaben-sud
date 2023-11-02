@@ -1,6 +1,6 @@
-package sud.aufgaben.occupationalTherapy.figure.pyramid;
+package occupationalTherapy.figure.pyramid;
 
-import sud.aufgaben.occupationalTherapy.form.Circle;
+import occupationalTherapy.form.Circle;
 
 public class Cone extends PyramidalFigure<Circle> {
     public Cone(Circle base, double height) {

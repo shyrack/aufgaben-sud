@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy.form;
+package occupationalTherapy.form;
 
 public class Human {
 

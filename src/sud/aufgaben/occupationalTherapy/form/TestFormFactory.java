@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy.form;
+package occupationalTherapy.form;
 
 import java.io.IOException;
 import java.util.Scanner;

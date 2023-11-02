@@ -1,6 +1,6 @@
-package sud.aufgaben.occupationalTherapy.figure;
+package occupationalTherapy.figure;
 
-import sud.aufgaben.util.HelperFunctions;
+import util.HelperFunctions;
 
 public class Sphere extends Figure {
 

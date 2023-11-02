@@ -1,16 +1,16 @@
-package sud.aufgaben.occupationalTherapy.figure;
+package occupationalTherapy.figure;
 
-import sud.aufgaben.occupationalTherapy.CsvWriter;
-import sud.aufgaben.occupationalTherapy.figure.pyramid.*;
-import sud.aufgaben.occupationalTherapy.form.Circle;
-import sud.aufgaben.occupationalTherapy.form.Polygon;
-import sud.aufgaben.occupationalTherapy.form.Rectangle;
-import sud.aufgaben.occupationalTherapy.form.Triangle;
-import sud.aufgaben.occupationalTherapy.figure.Figure;
-import sud.aufgaben.occupationalTherapy.pricing.Material;
-import sud.aufgaben.occupationalTherapy.pricing.MaterialReader;
-import sud.aufgaben.occupationalTherapy.pricing.PriceCalculator;
-import sud.aufgaben.util.CSVWriter;
+import occupationalTherapy.CsvWriter;
+import occupationalTherapy.figure.pyramid.*;
+import occupationalTherapy.form.Circle;
+import occupationalTherapy.form.Polygon;
+import occupationalTherapy.form.Rectangle;
+import occupationalTherapy.form.Triangle;
+import occupationalTherapy.figure.Figure;
+import occupationalTherapy.pricing.Material;
+import occupationalTherapy.pricing.MaterialReader;
+import occupationalTherapy.pricing.PriceCalculator;
+import util.CSVWriter;
 
 import java.io.File;
 import java.io.IOException;

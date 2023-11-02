@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy.figure;
+package occupationalTherapy.figure;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package sud.aufgaben.methods;
+package methods;
 
 import java.util.Scanner;
 

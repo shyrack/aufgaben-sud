@@ -1,14 +1,14 @@
-package sud.aufgaben.occupationalTherapy.figure;
+package occupationalTherapy.figure;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-import sud.aufgaben.occupationalTherapy.iFactory;
-import sud.aufgaben.occupationalTherapy.figure.pyramid.Cone;
-import sud.aufgaben.occupationalTherapy.figure.pyramid.FourSidedPyramid;
-import sud.aufgaben.occupationalTherapy.figure.pyramid.PolygonalPyramid;
-import sud.aufgaben.occupationalTherapy.figure.pyramid.ThreeSidedPyramid;
-import sud.aufgaben.occupationalTherapy.form.*;
+import occupationalTherapy.iFactory;
+import occupationalTherapy.figure.pyramid.Cone;
+import occupationalTherapy.figure.pyramid.FourSidedPyramid;
+import occupationalTherapy.figure.pyramid.PolygonalPyramid;
+import occupationalTherapy.figure.pyramid.ThreeSidedPyramid;
+import occupationalTherapy.form.*;
 
 public class FigureFactory implements iFactory<Figure> {
     private String[] figures = {

@@ -1,4 +1,4 @@
-package sud.aufgaben.loops;
+package loops;
 
 import java.util.Scanner;
 

@@ -1,7 +1,7 @@
-package sud.aufgaben.occupationalTherapy.container;
+package occupationalTherapy.container;
 
-import sud.aufgaben.occupationalTherapy.container.mitarbeiter.*;
-import sud.aufgaben.occupationalTherapy.container.verwaltung.Abteilung;
+import occupationalTherapy.container.mitarbeiter.*;
+import occupationalTherapy.container.verwaltung.Abteilung;
 
 import java.util.ArrayList;
 import java.util.Collections;

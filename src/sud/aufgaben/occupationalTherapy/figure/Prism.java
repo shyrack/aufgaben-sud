@@ -1,6 +1,6 @@
-package sud.aufgaben.occupationalTherapy.figure;
+package occupationalTherapy.figure;
 
-import sud.aufgaben.occupationalTherapy.form.Form;
+import occupationalTherapy.form.Form;
 
 public class Prism<T extends Form> extends BasedFigure<T> {
 

@@ -1,7 +1,7 @@
-package sud.aufgaben.occupationalTherapy.container.kfz;
+package occupationalTherapy.container.kfz;
 
-import sud.aufgaben.occupationalTherapy.container.mitarbeiter.Mitarbeiter;
-import sud.aufgaben.occupationalTherapy.container.utilities.GPS;
+import occupationalTherapy.container.mitarbeiter.Mitarbeiter;
+import occupationalTherapy.container.utilities.GPS;
 
 import java.util.*;
 

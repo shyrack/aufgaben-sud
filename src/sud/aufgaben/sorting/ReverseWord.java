@@ -1,4 +1,4 @@
-package sud.aufgaben.sorting;
+package sorting;
 
 public class ReverseWord {
 

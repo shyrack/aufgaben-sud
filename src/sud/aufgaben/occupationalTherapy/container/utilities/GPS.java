@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy.container.utilities;
+package occupationalTherapy.container.utilities;
 
 public class GPS {
     double laengenGrad;

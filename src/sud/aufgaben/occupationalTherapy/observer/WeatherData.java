@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy.observer;
+package occupationalTherapy.observer;
 
 public class WeatherData extends Subject<WeatherData> {
 

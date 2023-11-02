@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy.pricing;
+package occupationalTherapy.pricing;
 
 public class Material {
 

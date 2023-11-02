@@ -1,7 +1,7 @@
-package sud.aufgaben.occupationalTherapy.figure.pyramid;
+package occupationalTherapy.figure.pyramid;
 
-import sud.aufgaben.occupationalTherapy.form.Rectangle;
-import sud.aufgaben.occupationalTherapy.form.Triangle;
+import occupationalTherapy.form.Rectangle;
+import occupationalTherapy.form.Triangle;
 
 public class FourSidedPyramid extends PyramidalFigure<Rectangle> {
     public FourSidedPyramid(Rectangle base, double height) {

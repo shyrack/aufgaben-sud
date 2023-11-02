@@ -1,8 +1,8 @@
-package sud.aufgaben.util.sql;
+package util.sql;
 
 import java.util.List;
 
-import sud.aufgaben.util.HelperFunctions;
+import util.HelperFunctions;
 
 public class Table {
 

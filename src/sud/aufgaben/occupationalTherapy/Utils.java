@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy;
+package occupationalTherapy;
 
 public class Utils {
     public static String join(String[] arr, String s) {

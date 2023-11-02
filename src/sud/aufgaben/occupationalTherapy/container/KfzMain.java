@@ -1,12 +1,12 @@
-package sud.aufgaben.occupationalTherapy.container;
+package occupationalTherapy.container;
 
-import sud.aufgaben.occupationalTherapy.container.kfz.Bus;
-import sud.aufgaben.occupationalTherapy.container.kfz.Kfz;
-import sud.aufgaben.occupationalTherapy.container.kfz.Lkw;
-import sud.aufgaben.occupationalTherapy.container.kfz.PersonenTransportFahrzeug;
-import sud.aufgaben.occupationalTherapy.container.mitarbeiter.Fahrer;
-import sud.aufgaben.occupationalTherapy.container.mitarbeiter.SchichtArbeiter;
-import sud.aufgaben.occupationalTherapy.container.utilities.GPS;
+import occupationalTherapy.container.kfz.Bus;
+import occupationalTherapy.container.kfz.Kfz;
+import occupationalTherapy.container.kfz.Lkw;
+import occupationalTherapy.container.kfz.PersonenTransportFahrzeug;
+import occupationalTherapy.container.mitarbeiter.Fahrer;
+import occupationalTherapy.container.mitarbeiter.SchichtArbeiter;
+import occupationalTherapy.container.utilities.GPS;
 
 public class KfzMain {
     public static void main(String[] args) {

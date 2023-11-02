@@ -1,4 +1,4 @@
-package sud.aufgaben.util.sql;
+package util.sql;
 
 public class TestExtended {
 

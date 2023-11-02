@@ -1,4 +1,4 @@
-package sud.aufgaben.designPatterns.legoCity;
+package designPatterns.legoCity;
 
 import java.util.ArrayList;
 import java.util.List;

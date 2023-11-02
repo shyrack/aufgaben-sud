@@ -1,6 +1,6 @@
-package sud.aufgaben.occupationalTherapy.form;
+package occupationalTherapy.form;
 
-import sud.aufgaben.util.HelperFunctions;
+import util.HelperFunctions;
 
 public class Circle extends Form {
 

@@ -1,8 +1,8 @@
-package sud.aufgaben.occupationalTherapy.form;
+package occupationalTherapy.form;
 
 import java.io.IOException;
 
-import sud.aufgaben.occupationalTherapy.CsvWriter;
+import occupationalTherapy.CsvWriter;
 
 public class Test {
 

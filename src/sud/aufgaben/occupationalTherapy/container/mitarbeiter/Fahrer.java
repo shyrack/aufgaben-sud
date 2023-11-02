@@ -1,4 +1,4 @@
-package sud.aufgaben.occupationalTherapy.container.mitarbeiter;
+package occupationalTherapy.container.mitarbeiter;
 
 public class Fahrer extends SchichtArbeiter {
     private static String[] gueltigeKlassen = {"B", "C", "D"};
