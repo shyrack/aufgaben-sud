@@ -7,5 +7,7 @@ public abstract class Player extends Figure {
         super(name, intelligence, strength, constitution, agility);
     }
 
-    public void move() {}
+    public void move() {
+        System.out.println("You move... somewhere...");
+    }
 }

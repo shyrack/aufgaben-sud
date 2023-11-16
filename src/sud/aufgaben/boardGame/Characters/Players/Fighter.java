@@ -1,19 +1,19 @@
 package boardGame.Characters.Players;
 
-import boardGame.Weapon;
+import boardGame.Weapons.WeaponBehavior;
 
 public abstract class Fighter extends Player {
-    private Weapon weapon;
+    private WeaponBehavior weapon;
 
     public Fighter(String name) {
         super(name, 2, 5, 4, 4);
     }
 
-    public void setWeapon(Weapon weapon) {
+    public void setWeapon(WeaponBehavior weapon) {
         this.weapon = weapon;
     }
 
-    public Weapon getWeapon() {
+    public WeaponBehavior getWeapon() {
         return this.weapon;
     }
 }
