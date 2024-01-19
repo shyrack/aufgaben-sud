@@ -3,16 +3,14 @@ package sud.aufgaben.designPatterns.remote.command;
 import sud.aufgaben.designPatterns.remote.Command;
 import sud.aufgaben.designPatterns.remote.receiver.Garage;
 
-public class GarageDoorOpenCommand implements Command {
-    private Garage garage;
-
+public class GarageDoorOpenCommand extends Command<Garage> {
     public GarageDoorOpenCommand(Garage garage) {
-        this.garage = garage;
+        super(garage);
     }
 
     @Override
     public void execute() {
-        this.garage.open();
+        super.receiver.open();
     }
 
     @Override
@@ -22,6 +20,6 @@ public class GarageDoorOpenCommand implements Command {
 
     @Override
     public void undo() {
-        this.garage.close();
+        super.receiver.close();
     }
 }

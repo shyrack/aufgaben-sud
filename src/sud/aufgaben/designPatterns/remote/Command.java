@@ -1,9 +1,17 @@
 package sud.aufgaben.designPatterns.remote;
 
-public interface Command {
-    void execute();
+import sud.aufgaben.designPatterns.remote.receiver.Receiver;
 
-    String getName();
+public abstract class Command<T extends Receiver> {
+    protected T receiver;
 
-    void undo();
+    public Command(T receiver) {
+        this.receiver = receiver;
+    }
+
+    public abstract void execute();
+
+    public abstract String getName();
+
+    public abstract void undo();
 }

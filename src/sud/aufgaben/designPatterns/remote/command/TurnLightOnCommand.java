@@ -3,16 +3,14 @@ package sud.aufgaben.designPatterns.remote.command;
 import sud.aufgaben.designPatterns.remote.Command;
 import sud.aufgaben.designPatterns.remote.receiver.Light;
 
-public class TurnLightOnCommand implements Command {
-    private Light light;
-
+public class TurnLightOnCommand extends Command<Light> {
     public TurnLightOnCommand(Light light) {
-        this.light = light;
+        super(light);
     }
 
     @Override
     public void execute() {
-        this.light.on();
+        super.receiver.on();
     }
 
     @Override
@@ -22,6 +20,6 @@ public class TurnLightOnCommand implements Command {
 
     @Override
     public void undo() {
-        this.light.off();
+        super.receiver.off();
     }
 }

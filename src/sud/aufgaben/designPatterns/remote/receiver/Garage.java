@@ -1,6 +1,6 @@
 package sud.aufgaben.designPatterns.remote.receiver;
 
-public class Garage {
+public class Garage extends Receiver {
 	private boolean open;
 
 	public boolean isOpen() {

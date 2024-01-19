@@ -1,6 +1,6 @@
 package sud.aufgaben.designPatterns.remote.receiver;
 
-public class Light {
+public class Light extends Receiver {
 	private String description;
 	private int state;
 

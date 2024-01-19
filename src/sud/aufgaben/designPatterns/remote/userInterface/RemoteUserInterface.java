@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 
 import sud.aufgaben.designPatterns.remote.Command;
 import sud.aufgaben.designPatterns.remote.Remote;
+import sud.aufgaben.designPatterns.remote.receiver.Receiver;
 
 public class RemoteUserInterface {
     private JPanel panel;
@@ -24,8 +25,8 @@ public class RemoteUserInterface {
         return this.panel;
     }
 
-    public void visualizePanel(List<Command> commands) {
-        for (Command command : commands) {
+    public void visualizePanel(List<Command<? extends Receiver>> commands) {
+        for (Command<? extends Receiver> command : commands) {
             JButton button = this.initializeCommandButton(command);
             this.panel.add(button);
         }
@@ -33,7 +34,7 @@ public class RemoteUserInterface {
         this.panel.add(this.initializeCommandUndoButton());
     }
 
-    private JButton initializeCommandButton(Command command) {
+    private JButton initializeCommandButton(Command<? extends Receiver> command) {
         JButton button = new JButton(command.getName());
         button.addActionListener(new CommandButtonActionListener(command));
 
@@ -48,9 +49,9 @@ public class RemoteUserInterface {
     }
 
     private class CommandButtonActionListener implements ActionListener {
-        private Command command;
+        private Command<? extends Receiver> command;
 
-        public CommandButtonActionListener(Command command) {
+        public CommandButtonActionListener(Command<? extends Receiver> command) {
             this.command = command;
         }
 

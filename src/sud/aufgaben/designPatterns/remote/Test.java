@@ -11,6 +11,7 @@ import sud.aufgaben.designPatterns.remote.command.TurnLightOffCommand;
 import sud.aufgaben.designPatterns.remote.command.TurnLightOnCommand;
 import sud.aufgaben.designPatterns.remote.receiver.Garage;
 import sud.aufgaben.designPatterns.remote.receiver.Light;
+import sud.aufgaben.designPatterns.remote.receiver.Receiver;
 import sud.aufgaben.designPatterns.remote.userInterface.RemoteUserInterface;;
 
 public class Test {
@@ -20,7 +21,7 @@ public class Test {
         Garage garage = new Garage();
 
         // Initialize commands
-        List<Command> commands = new ArrayList<>();
+        List<Command<? extends Receiver>> commands = new ArrayList<>();
         commands.add(new TurnLightOnCommand(light));
         commands.add(new TurnLightOffCommand(light));
         commands.add(new GarageDoorOpenCommand(garage));
